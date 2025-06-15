@@ -153,7 +153,7 @@ export default function ToDoApp() {
                       onClick={() => startEditing(t)}
                     />
                     <FontAwesomeIcon
-                      data-testid="fa-icon"
+                      data-testid="delete-icon"
                       icon={faTrash}
                       onClick={() => deleteTask(t.id)}
                     />
