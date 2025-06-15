@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(160deg, #153677, #4e085f, #2f4cdf);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.todo-heading {
+  color: #002765;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-heading img {
+  width: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input,
+.edit-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.edit-input {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius:5px;
+}
+
+button,
+.save-btn,
+.cancel-btn {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.save-btn {
+  padding: 10px 26px;
+  margin-left: 10px;
+}
+
+.cancel-btn {
+  background: #a4a4a4;
+  padding: 10px 20px;
+  margin-left: 8px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background: #a4a4a4;
+  border: none;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #153677;
+  color: white;
+}
+
+select {
+  background: #edeef0;
+  padding: 8px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  font-size: 18px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+ul li:hover {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+ul li::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  min-width: 25px;
+  border-radius: 50%;
+  background-image: url("/src/checkbox-blank-circle.png");
+  background-size: cover;
+  background-position: center;
+}
+
+ul li.checked .task-text {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url("/src/checkbox-circle-fill.png");
+}
+
+.task-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.icons {
+  display: flex;
+  gap: 14px;
+}
+
+.icons svg {
+  font-size: 18px;
+  color: #555;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.icons svg:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 450px) {
+  .todo-app {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  input,
+  .edit-input {
+    font-size: 14px;
+  }
+
+  button,
+  .save-btn,
+  .cancel-btn {
+    padding: 14px 34px;
+    font-size: 14px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filters button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  select {
+    padding: 8px 12px;
+  }
+
+  ul li {
+    font-size: 16px;
+    padding: 12px 10px;
+  }
+}
