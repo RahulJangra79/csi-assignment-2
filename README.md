@@ -31,8 +31,8 @@ This app allows you to add, remove, mark tasks as complete, filter, sort, and pe
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/yourusername/todo-app.git
-cd todo-app
+git clone https://github.com/RahulJangra79/csi-assignment-2.git
+cd csi-assignment-2
 ```
 
 2. Install dependencies:
@@ -71,10 +71,9 @@ npm test
 #### 📄 Test File:
 
 ```
-src/ToDoApp.test.js
+src/App.test.js
 ```
 
-> Tip: You must add `data-testid="fa-icon"` to FontAwesome icons for easy testing in the DOM.
 
 ---
 
@@ -84,7 +83,7 @@ src/ToDoApp.test.js
 src/
 ├── ToDoApp.js         // Main component
 ├── ToDoApp.css        // Styling
-├── App.test.js    // Test cases
+├── App.test.js        // Test cases
 ```
 
 ---
